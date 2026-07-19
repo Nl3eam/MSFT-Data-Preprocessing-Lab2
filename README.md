@@ -1,22 +1,15 @@
-# ใบงานที่ 2: Data Preprocessing
-วิชา Machine Learning (Microsoft MSFT Stock Dataset)
+# Microsoft (MSFT) Stock Dataset – Data Exploration, Visualization, Cleaning & Feature Engineering
 
-## วัตถุประสงค์
-1. เพื่อเข้าใจหลักการและความสำคัญของการทำ Data Preprocessing กับข้อมูลอนุกรมเวลา (Time Series)
-2. สามารถตรวจสอบคุณภาพของข้อมูลหุ้น (Missing Values, Duplicates, Outliers) ได้
-3. ประยุกต์ใช้เทคนิค Data Cleaning, Transformation และ Encoding ได้อย่างเหมาะสม
-4. พัฒนาทักษะการเขียนโปรแกรมภาษา Python ร่วมกับไลบรารี Pandas, Seaborn และ Scikit-Learn
+This project performs a full exploratory data analysis (EDA) and preprocessing pipeline on the Microsoft (MSFT) Stock Dataset from Kaggle (1986 to Present). It covers dataset exploration, visualization, data cleaning, and feature engineering, structured into four labs/parts as required by the assignment.
 
-## โครงสร้างโปรเจกต์
-* `MSFT_price.csv` : ไฟล์ข้อมูลดิบ (Microsoft Stock Data: 1986 to Present)
-* `lab.ipynb` : ไฟล์ Jupyter Notebook ที่รวมโค้ดและผลการวิเคราะห์ทั้งหมด
-* `README.md` : เอกสารอธิบายโครงสร้างและสรุปผลโปรเจกต์
+## Dataset
+* **Source:** Microsoft (MSFT) Stock Dataset (Kaggle)
+* **File:** MSFT_price.csv
+* **Target variable:** Price_Direction (1/0 — whether the closing price was higher than the opening price)
 
-## ขั้นตอนการดำเนินงาน
-1. **LAB1: Dataset Exploration** - ตรวจสอบขนาดข้อมูล ประเภทตัวแปร ค่าทางสถิติ และสร้างตัวแปร Target 'Price_Direction' เพื่อวิเคราะห์การกระจายตัวของคลาส (หุ้นขึ้น/หุ้นลง)
-2. **LAB2: Data Visualization** - แสดงผลกราฟ Histogram เพื่อดูการกระจายตัวของราคาและปริมาณการซื้อขาย และสร้าง Heatmap ดูความสัมพันธ์ (Correlation) ของดัชนีราคา
-3. **Part 3: Data Cleaning** - จัดการข้อมูลประเภทวันที่ (Date) ให้ถูกต้อง ตรวจสอบข้อมูลซ้ำ และเปรียบเทียบค่าเฉลี่ย (Mean) กับมัธยฐาน (Median) ของปริมาณการซื้อขาย (Volume)
-4. **Part 4: Feature Engineering** - สกัดฟีเจอร์จากวันที่ แตกออกเป็นเดือนเพื่อทำ Label Encoding และแตกเป็นไตรมาสเพื่อทำ One-Hot Encoding รวมถึงการประยุกต์ใช้ Feature Scaling (StandardScaler) กับข้อมูลราคา
-
-## สรุปผลการทดลอง
-จากการทำ Data Preprocessing ข้อมูลหุ้น MSFT พบว่าฟีเจอร์ด้านราคามีความสัมพันธ์กันสูงมาก (Correlation ใกล้เคียง 1.00) ในส่วนของปริมาณการซื้อขาย (Volume) มีลักษณะการกระจายตัวแบบเบ้ขวาชัดเจน ค่ามัธยฐานจึงเหมาะสมในการนำมาใช้วิเคราะห์มากกว่าค่าเฉลี่ย และเนื่องจากราคาหุ้นมีช่วงการเติบโตที่ห่างกันมากตั้งแต่ปี 1986 การทำ Feature Scaling จึงช่วยปรับระดับข้อมูลให้เหมาะสมและสมบูรณ์พร้อมสำหรับการนำไปสร้างแบบจำลองคาดการณ์ราคาหุ้นชิ้นต่อไป
+## Project Structure
+```text
+MSFT-Data-Preprocessing-Lab2/
+├── lab.ipynb
+├── MSFT_price.csv
+└── README.md
