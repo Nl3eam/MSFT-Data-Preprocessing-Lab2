@@ -13,6 +13,6 @@ MSFT-Data-Preprocessing-Lab2/
 ├── lab.ipynb
 ├── MSFT_price.csv
 └── README.md
-Requirements
+## Requirements
 Install the required Python packages before running:
 pip install pandas numpy matplotlib seaborn scikit-learn
